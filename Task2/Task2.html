@@ -4,12 +4,36 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>任务二：零基础HTML及CSS编码（一）</title>
 <style type="text/css">
-table tr th,td{border: 1px solid #000}
+
 div{
 	background-color: white;
 	position: relative;
 	top: 60px;
 }
+
+table{
+	border-collapse: collapse;
+	position: relative;
+	left: 20px;
+	right: 20px;
+	width: 1200px;
+    height: 150px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+th {
+    border: 1px solid white;
+    text-align: left;
+    background-color: rgb(38,38,38);
+    color: white;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
 
 /*用于去掉列表的前方圆点*/
 .noneDot{list-style:none;}
@@ -20,10 +44,12 @@ div{
 	font-weight:100;
 	color:rgb(107,92,89);
 }
+
 p{
 	text-indent: 2em;
 	line-height: 1.5em;
 }
+
 h3{color:rgb(101,106,112);}
 
 /*导航栏样式*/
@@ -53,17 +79,69 @@ h3{color:rgb(101,106,112);}
 	position: relative;
 	top: 1%;
 	left: 1%;
+	width: 30px;
+	height: 30px;
+}
+
+/*div*/
+.part_div{
+	position: relative;
+	left:20px;
+	right:20px;
+	top:60px;
+	bottom:20px;
+}
+
+.part_div>*{
+	position: relative;
+	left: 20px;
+}
+
+.fifthPart_div>*{
+	margin-bottom: 10px;
+}
+
+.fifthPart_div>p{
+	font-size: 13px;
+	font-weight: lighter;	
+}
+
+.fifthPart_div input{
+	left: 600px;
+    position: absolute;
+}
+
+
+/*图片部分*/
+.imgPart_div{
+	border: 1px solid black;
+	height: 130px;
+	width: 130px;
+	margin: 20px;
+}
+
+.imgPart_div img{
+	left: 10%;
+	height: 100px;
+	width: 100px;
+	top: -15px;
+	position: relative;
+}
+
+.imgPart_div p{
+	margin: 0;
+	position: relative;
+	left: -8px;
 }
 
 a:link {color:#FFFFFF;}    /* 未被访问的链接 */
 a:visited {color:#FFFFFF;} /* 已被访问的链接 */
 
-
-
 /*底部版权样式*/
 .copyRight_div{
 	background: black;
 	position: relative;
+	top: 100px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -88,10 +166,12 @@ a:visited {color:#FFFFFF;} /* 已被访问的链接 */
 			<li class="navBar_li"><a href="">导航链接三</a></li>
 			<li class="navBar_li"><a href="">导航链接四</a></li>
 		</ul>
-		<p><img src="task-img.png" class="navBar_img"></p>
+		<p><img src="http://www.w3school.com.cn/i/eg_tulip.jpg" class="navBar_img"></p>
 	</div>
 
-	<div>
+	<!-- 第一部分 -->
+	<div class
+	="part_div">
 		<h2>文章一级标题</h2>
 		<h3>文章二级标题</h3>
 		<p class="authorAndTime">文章作者&nbsp;文章发表时间</p>
@@ -104,7 +184,7 @@ a:visited {color:#FFFFFF;} /* 已被访问的链接 */
 			<a href="http://ife.baidu.com" >这里有一个链接链接到http://ife.baidu.com</a>
 			这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
 		</p>
-		<img src="task-img1.png">
+		<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
 		<p>
 			这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
 
@@ -112,10 +192,11 @@ a:visited {color:#FFFFFF;} /* 已被访问的链接 */
 		</p>
 	</div>
 
-	<div>
+	<!-- 第二部分 -->
+	<div class="part_div" style="height:665px">
 		<h2>另一篇文章一级标题</h2>
 		<h2>文章二级标题</h2>
-		<p>文章作者&nbsp;文章发表时间</p>
+		<p class="authorAndTime">文章作者&nbsp;文章发表时间</p>
 
 		<p>
 			这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
@@ -126,7 +207,7 @@ a:visited {color:#FFFFFF;} /* 已被访问的链接 */
 			<a href="http://ife.baidu.com" >这里有一个链接链接到http://ife.baidu.com</a>
 			这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。	
 		</p>
-		<img src="task-img1.png">
+		<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
 		<ul>
 			<li>项目列表一</li>
 			<li>项目列表二</li>
@@ -134,66 +215,105 @@ a:visited {color:#FFFFFF;} /* 已被访问的链接 */
 		</ul>
 	</div>
 
-	<div>
-		<h2>图片</h2>
+	<!-- 第三部分图片部分 -->
+	<div class="part_div" style="height:1200px">
+		<h2 style="top:20px;position:relative" >图片</h2>
 		<ul>
-			<li class="noneDot">好看的图片<br><img src="task-img1.png"></li><br>
-			<li class="noneDot">好看的图片<br><img src="task-img1.png"></li><br>
-			<li class="noneDot">好看的图片<br><img src="task-img1.png"></li><br>
-			<li class="noneDot">好看的图片<br><img src="task-img1.png"></li><br>
-			<li class="noneDot">好看的图片<br><img src="task-img1.png"></li><br>
-			<li class="noneDot">好看的图片<br><img src="task-img1.png"></li><br>
-			<li class="noneDot">好看的图片<br><img src="task-img1.png"></li><br>
+			<li class="noneDot">
+				<div class="imgPart_div">
+					<p>好看的图片</p><br>
+					<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+				</div>
+			</li>
+			<li class="noneDot">
+				<div class="imgPart_div">
+					<p>好看的图片</p><br>		
+					<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+				</div>
+			</li>
+			<li class="noneDot">
+				<div class="imgPart_div">
+					<p>好看的图片</p><br>		
+					<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+				</div>
+			</li>
+			<li class="noneDot">
+				<div class="imgPart_div">
+					<p>好看的图片</p><br>		
+					<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+				</div>
+			</li>
+			<li class="noneDot">
+				<div class="imgPart_div">
+					<p>好看的图片</p><br>		
+					<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+				</div>
+			</li>
+			<li class="noneDot">
+				<div class="imgPart_div">
+					<p>好看的图片</p><br>		
+					<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+				</div>
+			</li>
+			<li class="noneDot">
+				<div class="imgPart_div">	
+					<p>好看的图片</p><br>
+					<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+				</div>
+			</li>
 		</ul>
 	</div>
 
-	<div>
+	<!-- 第四部分 -->
+	<div class="part_div" style="height:400px">
 		<h2>最后一篇文章一级标题</h2>	
 		<h2>文章二级标题</h2>	
 
-		<p>文章作者&nbsp;文章发表时间</p>
+		<p class="authorAndTime">文章作者&nbsp;文章发表时间</p>
 
 		<ol>
 			<li>排名1</li>
 			<li>排名2</li>
 			<li>排名3</li>
 		</ol>
-		<br>下面是一个表格，给表格加上了一个border="1"好让你看出是一个表格</br>
-		<table summary="" border="1">
+
+		<p>下面是一个表格，给表格加上了一个border="1"好让你看出是一个表格</p>
+
+		<table >
 			<tr>
-				<th align="left">第一个表头</th>
-				<th align="left">第二个表头</th>
-				<th align="left">第三个表头</th>
+				<th align="left">表头</th>
+				<th align="left">表头</th>
+				<th align="left">表头</th>
 			</tr>
 			<tr>
-		   		<td align="left">第一个表内容单元格</td>
-		   		<td align="left">第二个表内容单元格</td>
+		   		<td align="left">表内容单元格</td>
+		   		<td align="left">表内容单元格</td>
 		   		<td align="left"><a href="">操作</a></td>   		
 			</tr>
 			<tr>
-		   		<td align="left">第一个表内容单元格</td>
-		   		<td align="left">第二个表内容单元格</td>
+		   		<td align="left">表内容单元格</td>
+		   		<td align="left">表内容单元格</td>
 		   		<td align="left"><a href="">操作</a></td>  
 			</tr>		
-		   		<td align="left">第一个表内容单元格</td>
-		   		<td align="left">第二个表内容单元格</td>
+		   		<td align="left">表内容单元格</td>
+		   		<td align="left">表内容单元格</td>
 		   		<td align="left"><a href="">操作</a></td>  
 			</tr>
 			<tr>		
-		   		<td align="left">第一个表内容单元格</td>
-		   		<td align="left">第二个表内容单元格</td>
+		   		<td align="left">表内容单元格</td>
+		   		<td align="left">表内容单元格</td>
 		   		<td align="left"><a href="">操作</a></td>  
 			</tr>
 			<tr>		
-		   		<td align="left">总计</td>
-		   		<td colspan="2" align="left">1000</td>	
+		   		<td align="left" style="background-color:rgb(193,193,193)">总计</td>
+		   		<td  align="left" colspan="2" style="background-color:rgb(193,193,193)">1000</td>
 			</tr>
 		</table>
 	</div>
 
-	<div>
-		<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
-		<h2>侧栏注册窗口标题</h2>
+	<!-- 第五部分 -->
+	<div class="part_div fifthPart_div">
+		<h2>这里以后是一个侧栏，这是侧栏的标题</h2>		
 		<form>
 			请输入邮箱地址：
 			<input type="text" name="addresss" placeholder="这是一个文本输入框"><br/> 
@@ -201,7 +321,9 @@ a:visited {color:#FFFFFF;} /* 已被访问的链接 */
 		<p>邮箱地址请按要求格式输入</p>
 		<form>
 			请输入密码：
-			<input type="password" name="password1" placeholder="这是一个文本输入框">
+			<input type="password" name="password1" placeholder="这是一个文本输入框">			
+		</form>
+		<form>
 			请重复输入密码：
 			<input type="password" name="password2" placeholder="这是一个文本输入框">
 		</form>
@@ -238,7 +360,7 @@ a:visited {color:#FFFFFF;} /* 已被访问的链接 */
 	</div>
 
 	<div class="copyRight_div">
-		<p class="copyRight_p">版权所有<img src="task-img2.png"></p>
+		<p class="copyRight_p">版权所有<img src="http://www.w3school.com.cn/i/eg_tulip.jpg" width=30;height=30></p>
 	</div>
 </body>
 </html>

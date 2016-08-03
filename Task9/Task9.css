@@ -1,0 +1,582 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style-type: none;
+}
+
+.container{
+	width: 1278px;
+	height: 1278px;
+}
+
+.topBar{
+	background-color: rgb(30,118,179);
+	width: 100%;
+	height: 50px;
+}
+
+.topBar ul{
+	margin-top: 7px;
+    margin-right: 100px;
+    height: 31px;
+    width: 400px;
+    float: right;
+}
+
+.topBar img{
+	height: 34px;
+	width: 34px;
+	margin-left: 46px;
+	margin-top: 8px;
+}
+
+.topBar .search{
+	float: right;
+	height: 27px;
+	width: 317px;
+    border-radius:13.5px;/* W3C syntax */   
+}
+
+.topBar *{
+	display: inline-block;
+}
+
+.topBar li{
+	list-style-type: none;
+	float: right;
+	display: inline-block;
+}
+
+.topBar p{
+	color: white;
+	font-size: 13px;
+	margin-left: 20px;
+	top: 7px;
+    position: relative;
+}
+
+.topBar .searchLogo{
+	width:24px;
+	height:24px;	 
+    border-radius:12px;/*W3C syntax*/
+    position: relative;
+    left: 40px;
+    top: 4px;
+}
+
+.mainBlock{
+
+}
+
+.mainBlock>li{
+	float: left;
+}
+
+/*侧边栏*/
+.leftMenu{
+	width: 260px;
+	height: 1205px;
+	background-color: rgb(31,34,46);
+	display: inline-block;
+}
+
+.leftMenu .userInfo{
+	height: 146px;
+	width: 100%;
+}
+.userInfo *{
+	display: inline-block;
+}
+.userInfo img{
+	height: 50px;
+	width: 50px;
+    border-radius:30px;/*W3C syntax*/
+    border: 1px solid white;
+    padding: 5px;
+	margin-left: 40px;
+	margin-top: 14px;
+}
+.userInfo h5{
+	font-size: 10px;
+	color: white;
+	margin-top: 38px;
+	margin-left: 18px;
+	position: relative;
+    top: -22px;
+}
+.userInfo h6{
+	font-size: 9px;
+	color: rgb(77,90,110);
+	display: block;
+	text-align: center;
+}
+.userInfo .detailInfo{
+	display: block;
+	width: 100%;
+	margin-top: 25px;
+}
+.detailInfo li{
+	width: 48%;
+}
+.userInfo .spliting{
+	height: 23px;
+	width: 2px;
+	background-color: rgb(77,90,110);
+}
+
+.leftMenu .menuBar{
+	width: 100%;
+	height: 100px;
+	margin-top: 20px;
+}
+.menuBar .typeMenu{
+	width: 100%;
+    min-height: 40px;
+}
+.typeMenu *{
+	display: inline-block;
+}
+.typeMenu h5{
+	font-size: 10px;
+	color: rgb(77,90,110);
+	margin-left: 10px;
+}
+.menuBar .clicked{
+	color: white;
+	background-color: rgb(42,46,61);
+}
+.typeMenu img{
+	margin-left: 40px;
+}
+
+.typeMenu .unfoldMenu{
+	background-color: rgb(42,46,61);
+	display: block;
+    margin-left: 40px;
+}
+.unfoldMenu li{
+	display: block;
+}
+.unfoldMenu .unfoldFile{
+	display:block;
+	margin-left: 70px;
+}
+
+/*右边内容*/
+.rightContainer{
+	background-color: rgb(234,232,232);
+    width: 1018px;
+	height: 1205px;
+	display: inline-block;
+}
+.rightContainer li{
+	width: auto;
+	height: auto;
+}
+
+.rightContainer .clickedTitle{
+	height: 30px;
+	width: 100%;
+	background-color: white;
+	box-sizing:border-box;
+    padding-top: 9px;
+}
+.clickedTitle h5{
+	font-size: 10px;
+	color: gray;
+	margin-left: 26px;
+}
+
+/*查询项*/
+.rightContainer .searchCondition{
+	background-color: white;
+	margin-left: 60px;
+	margin-top: 25px;
+	width: 885px;
+	height: 86px;
+	padding-left: 30px;
+	padding-top: 18px;
+	box-sizing:border-box;
+}
+.searchCondition h5{
+	font-size: 12px;
+	color: lightgray;
+	margin-right: 10px;
+}
+.searchCondition .firstCondition{
+	width: 132px;
+	height: 54px;
+}
+.searchCondition *{
+	display: inline-block;
+}
+.searchCondition .searchConditionUL{
+	width: 100%;
+	height: 100%;
+}
+.searchConditionUL li{
+	float: left;
+}
+.searchConditionUL .secondCondition{
+	width: 182px;
+	height: 54px;
+	margin-left: 30px;
+}
+.secondCondition li{
+	margin-bottom: 10px;
+}
+.secondCondition select{
+    width: 144px;
+}
+.searchConditionUL .thirdCondition{
+    width: 295px;
+	height: 54px;
+	margin-left: 50px;
+}
+.thirdCondition li{
+	margin-bottom: 10px;
+}
+.searchConditionUL .commit{
+	width: 52px;
+	height: 23px;
+	background-color: rgb(30,118,179);
+	color: white;
+	font-weight: 100;
+	font-size: 	10px;
+    margin-top: 10px;
+    margin-left: 26px;
+    border: none;
+}
+
+/*10:00 am*/
+.rightContainer .timeAndFundPart{
+	height: 65px;
+	width: 885px;
+	margin-left: 60px;
+	margin-top: 15px;
+}
+.timeAndFundPart .timeAndFund{
+	height: 100%;
+	width: 100%;
+}
+.timeAndFund li{
+	background-color: white;
+	display: inline-block;
+	float: left;
+	margin-left: 6px;
+}
+.timeAndFund .leftBtn{
+	height: 100%;
+	width: 30px;
+	background-image: url(http://img.blog.csdn.net/20160726171210120);
+	background-repeat:no-repeat;
+	background-size:18px 25px;
+	background-position: 8px;
+	background-color: white;
+	border: none;
+	margin-left: 0;
+}
+.timeAndFund .rightBtn{
+		height: 100%;
+	width: 30px;
+	background-image: url(http://img.blog.csdn.net/20160726171220085);
+	background-repeat:no-repeat;
+	background-size:18px 25px;
+	background-position: 8px;
+	background-color: white;
+	margin-left: 6px;
+	border: none;
+}
+.timeAndFund .dataPart{
+	width: 110px;
+	height: 100%;
+    
+    padding-top: 12px;
+	padding-left: 30px;
+	box-sizing:border-box;
+}
+.dataPart h6{
+	color: black;
+	font-size: 10px;
+}
+.dataPart span{
+	color: gray;
+	font-size: 10px;
+}
+.dataPart h5{
+	margin-top: 10px;
+	color: rgb(229,78,7);
+	font-size: 18px;
+}
+.timeAndFund .historySearch{
+	height: 100%;
+	width: 103px;
+    margin-left: 14px;
+    box-sizing:border-box;
+    padding: 12px;
+}
+.historySearch *{
+	display: inline-block;
+	float: left;
+}
+.historySearch h5{
+	font-weight: 100;
+    margin-top: 13px;
+}
+.historySearch img{
+    height: 25px;
+    width: 21px;
+    margin-top: 6px;
+}
+
+/*2016年4月份统计*/
+.rightContainer .h5{
+	font-size: 12px;
+	color: darkgray;
+}
+.rightContainer .statistics{
+	height: 90px;
+	width: 890px;
+	margin-left: 60px;
+}
+.statistics h5{
+	font-size: 12px;
+	color: rgb(16,16,16);
+	margin-top: 30px;
+}
+.statistics .tradeBoxs{
+	height: 70px;
+	width: 900px;
+}
+.tradeBoxs .tradeBox{
+	float: left;
+	width: 200px;
+	height: 70px;
+	background-color: white;
+	border-radius:2px;
+	border: 1px solid lightgray;
+    margin-top: 6px;
+}
+.tradeBox *{
+	float: left;
+}
+.tradeBox .leftLine{
+	height: 100%;
+	background-color: rgb(57,165,139);
+	width: 3px;
+}
+.tradeBox .tradeTitle{
+    height: 100%;
+    width: 40px;
+    margin-top: 20px;
+    margin-left: 9px;
+}
+.tradeTitle h4{
+	font-size: 10px;
+	color: rgb(57,58,58);
+}
+.tradeTitle h5{
+	font-size: 10px;
+	color: lightgray;
+	margin-top: 10px;
+}
+.tradeBox .rectBox{
+	width: 60px;
+	height: 45px;
+	background-color: rgb(57,165,139);
+    margin-top: 12px;
+	margin-left: 70px;
+}
+.tradeBox+.tradeBox{
+	margin-left: 25px;
+}
+/*第一组项目*/
+.rightContainer .projectTable{
+	width: 890px;
+	height: 350px;
+	margin-left: 60px;
+	margin-top: 12px;
+}
+.projectTable>li{
+	border-radius:8px;
+	background-color: white;
+	border: 2px solid lightgray;
+	height: 100%;
+	float: left;
+}
+.projectTable .tableHeader{
+	height: 38px;
+	background-color: rgb(241,242,244);
+	width: 100%;
+	border-radius:8px 8px 0 0;
+	box-sizing:border-box;
+	padding-left: 20px;
+	padding-top: 12px;
+
+}
+.tableHeader h5{
+	font-size: 10px;
+	color: rgb(160,160,160);
+	margin: 0 auto;
+	width: 100%;
+}
+.projectTable .projectTable1{
+	width: 530px;
+}
+.projectTable .projectTable2{
+	margin-left: 12px;
+	width: 340px;
+}
+.projectTable1 .tableTitleTab{
+    width: 490px;
+	height: 28px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.tableTitleTab li{
+	margin-left: 10px;
+	display: inline-block;
+}
+.tableTitleTab .tableTitle{
+	width: 80px;
+	height: 26px;
+	background-color: rgb(231,231,235);
+    border-radius: 5px 5px 0 0 ;
+    border: 0;
+}
+.tableTitleTab .clickedTableTitle{
+	background-color: white;	
+	border: 2px solid lightgray;
+	border-radius:5px 5px 0 0 ;
+	border-bottom: 0;
+}
+.tableTitle h5{
+	margin-left: 16px;
+    margin-top: 6px;
+    font-size: 14px;
+	color:rgb(82,82,82);
+}
+.projectTable1 .tableBody{
+	width: 488px;
+	height: 248px;
+	border: 2px solid lightgray;
+	box-sizing:border-box;
+	padding: 30px;
+	border-radius:0 5px 5px 5px;
+	margin-left: 20px;
+    margin-top: -2px;
+}
+.tableBody table{
+	border-collapse: collapse;
+    font-size: 13px;
+    font-weight: bold;
+    table-layout:fixed;    
+    empty-cells: hide; 
+   	width: 402px;
+   	height: 185px;
+}
+.tableBody table td {
+    border: 2px solid #dddddd;
+    text-align: center;
+    color: rgb(111,111,111);
+}
+.tableDetail{
+	box-sizing:border-box;
+	padding: 23px 50px;
+}
+.tableDetail h4{
+	border: 0;
+	font-size: 14px;
+	color: black;
+	margin-top: 5px;
+}
+.tableDetail h5{
+	border: 0;
+	font-size: 13px;
+	color: rgb(187,187,187);
+	margin-top: 10px;
+}
+.tableDetail table{
+	width: 306px;
+	height: 46px;
+	border: 2px solid #dddddd;
+	border-left: 0;
+	border-right: 0;
+	margin-top: 10px;
+}
+.tableDetail table th{
+	font-size: 13px;
+	color: rgb(187,187,187);
+}
+.tableDetail table td{
+	font-size: 14px;
+	color: black;
+}
+.tableDetail table td+td,th+th{
+	border-left: 2px solid #dddddd;
+    text-align: center;
+}
+.tableDetail textarea{
+	text-align: left;
+	border: 0;
+	border-bottom: 2px solid #dddddd;
+}
+.tableDetail .checkPara *{
+	display: inline-block;
+}
+.tableDetail .checkPara h5{
+	font-size: 13px;
+	color: rgb(187,187,187);
+	margin-left: 10px;
+}
+.tableDetail .checkPara .commit{
+	width: 48px;
+	height: 23px;
+	background-color: rgb(30,118,179);
+	color: white;
+	font-weight: 100;
+	font-size: 	10px;
+    border: none;
+    text-align: center;
+    margin-left: 32px;
+}
+.rightContainer .calendarPart{
+	width: 1017px;
+	height: 360px;
+}
+.calendarPart *{
+	display: inline-block;
+}
+.rightContainer .tableHeader{
+	height: 38px;
+    background-color: rgb(241,242,244);
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 12px;
+    border-bottom: 1px solid lightgray;
+}
+.calendarPart .calendar{
+	border-radius: 8px 8px 8px 8px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-left: 60px;
+	height: 350px;
+	width: 360px;
+	background-color: white;
+	border: 2px solid lightgray;
+}
+.calendarPart .carBank{
+	border-radius: 8px 8px 8px 8px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-left: 10px;
+	height: 350px;
+	width: 523px;
+	background-color: white;
+	border: 2px solid lightgray;
+}

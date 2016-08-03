@@ -1,0 +1,466 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>任务五：零基础HTML及CSS编码（二）</title>
+<style type="text/css">
+body{
+	background-color: rgb(214,214,214);
+	min-width: 964px;
+}
+
+div{
+	background-color: white;
+}
+
+table{
+	border-collapse: collapse;
+	position: relative;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+    height: 150px;
+    font-size: 13px;
+    font-weight: bold;
+    table-layout:fixed;    
+    empty-cells: hide; 
+}
+
+.leftPart table{
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    margin-left: -20px;
+}
+
+.leftPart th {
+    border: 1px solid white;
+    text-align: left;
+    background-color: rgb(38,38,38);
+    color: white;
+}
+.leftPart td {
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+.rightPart td{
+	font-size: 12px;
+	font-weight: lighter;
+}
+.rightPart table{
+	margin: 40px 0px;
+}
+.rightPart>h3{
+	display:inline;
+	bottom:20px;
+	position:relative;
+}
+
+.leftPart{
+	/*background-color: yellow;*/
+	background-color: rgb(214,214,214);
+    margin-left: 20px;
+    margin-right: 513px;
+    margin-bottom: 101px;
+    margin-top: 91px;
+    min-width: 442px;
+    /*padding: 40px;*/
+}
+
+.leftContentPart{
+	padding: 20px;
+	margin: 10px;
+}
+
+.rightPart{
+    /*background-color: gray;*/
+	width: 450px;
+	/*height: 800px;*/
+	float: right;
+	margin-right: 20px;
+	padding: 20px 5px;
+	/*margin-top: 20px;*/
+}
+
+/*用于去掉列表的前方圆点*/
+.noneDot{list-style:none;}
+/*用于作者和发表时间的段落样式*/
+.authorAndTime{
+	text-indent:0em;
+	font-size:15px;
+	font-weight:100;
+	color:rgb(107,92,89);
+}
+
+p{
+	text-indent: 2em;
+	line-height: 1.5em;
+}
+
+.leftPart h3{
+	color:rgb(101,106,112);
+}
+
+
+/*导航栏样式*/
+.navBar_ul{
+	margin:0;
+	padding-right:20px;
+	position: absolute;
+	right:10px;
+	top: 30%;
+}
+.navBar_li{
+	display:inline;
+	top: 20px;
+	right: 10px;
+}
+.navBar_div{
+	background:rgb(38,38,38);
+	color:white;
+	position:fixed;
+	right:0px;
+	top: 0px;
+	left: 0px;
+	height: 60px;
+	z-index: 1000;
+}
+.navBar_img{
+	position: relative;
+	top: 1%;
+	left: 1%;
+	width: 80px;
+	height: 30px;
+}
+
+/*图片部分*/
+.imgPart_div{
+	border: 1px solid black;
+	height: 130px;
+	width: 130px;
+	margin: 20px;
+	float: left;
+}
+
+.imgPart_div img{
+	left: 10%;
+	height: 100px;
+	width: 100px;
+	top: -15px;
+	position: relative;
+}
+
+.imgPart_div p{
+	margin: 0;
+	position: relative;
+	left: -8px;
+}
+
+.clear {
+  clear: both;
+}
+
+/*底部版权样式*/
+.copyRight_div{
+	background: black;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	color: white;
+}
+
+.copyRight_p{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: 0;
+	width: 120px;
+	font-size: 15px;
+	margin-top: -11px;
+	margin-left: -60px;
+}
+
+.grayBlock{
+	display:inline-block;
+	background-color: lightgray;
+	height: 60px;
+	width: 5px;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+.navBar_li>a:link {color:#FFFFFF;font-size: 10px}    /* 未被访问的链接 */
+.navBar_li>a:visited {color:#FFFFFF;font-size: 10px} /* 已被访问的链接 */
+
+input[type='submit']{
+  width: 90%;
+  height: 40px;
+  background: #3355D0;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  border:1px solid #3355D0;
+  font-weight: 800;
+  margin-left: 5%;
+}
+
+</style>
+</head>
+
+<body>
+	<!--导航栏-->
+	<div class="navBar_div";>
+		<ul class="navBar_ul">
+			<li class="navBar_li"><a href="">导航链接一</a></li>
+			<li class="navBar_li"><a href="">导航链接二</a></li>
+			<li class="navBar_li"><a href="">导航链接三</a></li>
+			<li class="navBar_li"><a href="">导航链接四</a></li>
+		</ul>
+		<p><img src="http://www.w3school.com.cn/i/eg_tulip.jpg" class="navBar_img"></p>
+	</div>
+	<div class="part_div rightPart">
+		<div class="grayBlock"></div>
+		<h3>这里以后是一个侧栏，这是侧栏的标题</h3>	
+		<table  cellspacing="20%" cellpadding="10">
+			<tr>
+				<td align="right">请输入邮箱地址</td>
+				<td><input type="text" name="addresss" value="这是一个文本输入框"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td style="color:gray;font-size:5px;padding-bottom:20px;">邮箱地址请按要求格式输入</td>
+			</tr>
+			<tr>
+				<td align="right">请输入密码</td>
+				<td><input type="password" name="password1" value="这是一个文本输入框"></td>
+			</tr>
+			<tr>
+				<td align="right">请重复输入密码</td>
+				<td><input type="password" name="password2" value="这是一个文本输入框"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td style="color:gray;font-size:5px;padding-bottom:20px;">密码请为6-16位英文数字</td>
+			</tr>
+			<tr>
+				<td align="right">性别</td>
+				<td>
+					<input type="radio" value="1" name="gender" checked="checked"/>
+					<label>男</label>
+					<input type="radio" value="2" name="gender"/>
+					<label>女</label>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">城市</td>
+				<td>
+					<select>
+					<option value="beijing" selected="selected">北京</option>
+					<option value="shanghai">上海</option>
+					<option value="guangdong">广东</option>
+					<option value="foshan">佛山</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">爱好</td>
+				<td>
+					<input type="checkbox" value=1 name="hobby">
+					<label>运动</label>
+					<input type="checkbox" value=2 name="hobby">
+					<label>艺术</label>
+					<input type="checkbox" value=3 name="hobby">
+					<label>科学</label>
+				</td>
+			</tr>	
+			<tr>
+				<td align="right" style="vertical-align:top; padding-top: 20px;">个人描述</td>
+				<td><textarea rows=6em cols=22em>这是一个多行输入框，输入您的个人描述</textarea></td>
+			</tr>	
+		</table>
+		<input type="submit" value="确认提交" name="submit"/>
+	</div> 
+
+	<div class="leftPart">
+
+		<div class="leftContentPart">
+			<h2>文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<p class="authorAndTime">文章作者&nbsp;文章发表时间</p>
+			<p>
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+
+				这是一个很长很长的段落，这是一个很长很长的段落，
+				<a href="http://ife.baidu.com" >这里有一个链接链接到http://ife.baidu.com</a>
+				这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
+			</p>
+			<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+			<p>
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com" target="_blank">这里有一个链接点击后打开新窗口链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。<br>
+			</p>
+		</div>
+
+		
+		<div class="leftContentPart">
+			<h2>另一篇文章一级标题</h2>
+			<h2>文章二级标题</h2>
+			<p class="authorAndTime">文章作者&nbsp;文章发表时间</p>
+
+			<p>
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+
+				这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+
+				这是一个很长很长的段落，这是一个很长很长的段落，
+				<a href="http://ife.baidu.com" >这里有一个链接链接到http://ife.baidu.com</a>
+				这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。	
+			</p>
+			<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+			<ul>
+				<li>项目列表一</li>
+				<li>项目列表二</li>
+				<li>项目列表三</li>
+			</ul>
+		</div>
+
+
+		<div class="leftContentPart">			
+			<h2>图片</h2>
+			<ul>
+				<li class="noneDot">
+					<div class="imgPart_div group">
+						<p>好看的图片</p><br>
+						<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+					</div>
+				</li>
+				<li class="noneDot">
+					<div class="imgPart_div group">
+						<p>好看的图片</p><br>		
+						<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+					</div>
+				</li>
+				<li class="noneDot">
+					<div class="imgPart_div group">
+						<p>好看的图片</p><br>		
+						<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+					</div>
+				</li>
+				<li class="noneDot">
+					<div class="imgPart_div group">
+						<p>好看的图片</p><br>		
+						<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+					</div>
+				</li>
+				<li class="noneDot">
+					<div class="imgPart_div group">
+						<p>好看的图片</p><br>		
+						<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+					</div>
+				</li>
+				<li class="noneDot">
+					<div class="imgPart_div group">
+						<p>好看的图片</p><br>		
+						<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+					</div>
+				</li>
+				<li class="noneDot">
+					<div class="imgPart_div group">	
+						<p>好看的图片</p><br>
+						<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+					</div>
+				</li>			
+				<li class="noneDot">
+					<div class="imgPart_div group">	
+						<p>好看的图片</p><br>
+						<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+					</div>
+				</li>
+				<li class="noneDot">
+					<div class="imgPart_div group">	
+						<p>好看的图片</p><br>
+						<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+					</div>
+				</li>
+				<li class="noneDot">
+					<div class="imgPart_div group">	
+						<p>好看的图片</p><br>
+						<img src="http://www.w3school.com.cn/i/eg_tulip.jpg">
+					</div>
+				</li>										
+				<div class="clear"></div>
+			</ul>
+		</div>
+		
+		<div class="leftContentPart">
+			<h2>最后一篇文章一级标题</h2>	
+			<h3>文章二级标题</h2>	
+
+			<p class="authorAndTime">文章作者&nbsp;文章发表时间</p>
+
+			<ol>
+				<li>排名1</li>
+				<li>排名2</li>
+				<li>排名3</li>
+			</ol>
+
+			<p style="text-indent: 0em;">下面是一个表格，给表格加上了一个border="1"好让你看出是一个表格</p>
+
+			<table >
+				<tr>
+					<th align="left">表头</th>
+					<th align="left">表头</th>
+					<th align="left">表头</th>
+				</tr>
+				<tr>
+			   		<td align="left">表内容单元格</td>
+			   		<td align="left">表内容单元格</td>
+			   		<td align="left"><a href="">操作</a></td>   		
+				</tr>
+				<tr>
+			   		<td align="left">表内容单元格</td>
+			   		<td align="left">表内容单元格</td>
+			   		<td align="left"><a href="">操作</a></td>  
+				</tr>		
+			   		<td align="left">表内容单元格</td>
+			   		<td align="left">表内容单元格</td>
+			   		<td align="left"><a href="">操作</a></td>  
+				</tr>
+				<tr>		
+			   		<td align="left">表内容单元格</td>
+			   		<td align="left">表内容单元格</td>
+			   		<td align="left"><a href="">操作</a></td>  
+				</tr>
+				<tr>		
+			   		<td align="left" style="background-color:rgb(193,193,193)">总计</td>
+			   		<td  align="left" colspan="2" style="background-color:rgb(193,193,193)">1000</td>
+				</tr>
+			</table>
+		</div> 
+	</div>
+
+	<div class="copyRight_div">
+		<p class="copyRight_p">版权所有<img src="http://www.w3school.com.cn/i/eg_tulip.jpg" width=20;height=20></p>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

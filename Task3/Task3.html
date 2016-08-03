@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务三：三栏式布局</title>
+<style type="text/css">
+body{
+	padding: 20px;
+  	font-family: "微软雅黑";
+  	font-size: 15px;
+  	margin: 0px;
+}
+
+div{
+	margin: 20px;
+	border: 1px solid #999;
+	background-color: white;
+}
+
+img{
+	width: 80px;
+	height: 80px;
+}
+
+.detailDescription_div>p{ 
+	text-indent:2em; 
+	padding:0px; 
+	margin:20px; 
+}
+
+.background_div{
+	background-color: #eee;
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 20px;
+	min-width: 800px;
+}
+
+.left_div{
+	float: left;
+	width: 200px;
+	height: 120px;
+}
+
+.right_div{
+	float: right;
+	width: 120px;
+}
+
+.detailDescription_div{
+ 	max-height: 428px;
+ 	position: absolute;
+ 	left: 220px; 
+ 	right: 140px;
+ 	min-width: 300px;
+ 	overflow: auto;
+}
+
+.teamLogo_div{
+	position: absolute;
+	height:80px;
+	width: 80px;
+	display:inline-block;
+}
+
+.teamLogo_p{
+	position: relative;
+	margin: 20px;
+	left: 100px;
+	width: 60px;
+	padding:0;
+}
+
+.personalLogo_div{
+	width: 80px;
+	height: 80px;
+	background-color: red;
+}
+
+.detailDescription_div p{
+
+}
+
+</style>
+</head>
+
+
+<body>
+<div class="background_div">
+	<!--左边div-->
+	<div class="left_div">
+		<div class="teamLogo_div">
+			<img src="http://f.hiphotos.baidu.com/image/h%3D300/sign=4c524181d643ad4bb92e40c0b2025a89/03087bf40ad162d967b2de3816dfa9ec8a13cdb2.jpg">
+		</div>
+		<p class="teamLogo_p">仙剑奇侠传</p>
+	</div>
+	<!--中间模块-->
+	<div class="detailDescription_div">
+		<p>关于这部电影的介绍</p>
+		<p>《仙剑奇侠传》是根据大宇资讯同名RPG游戏改编的古装奇幻爱情剧</p>
+		<p>该剧讲述了渔村的店小二李逍遥与女娲的后人赵灵儿以及林家堡大小姐林月如等人之间的恩爱情仇、拯救苍生的古装神话故事。该剧是中国第一部由电玩游戏改编的电视剧，开创古装游戏改编剧新潮</p>
+		<p>李逍遥，小渔村中的店小二。一段机缘巧合，相逢隐居仙灵岛躲避追杀的南诏国公主赵灵儿并与之永结连理。拜月教徒杀上岛，逍遥和灵儿不得不分开。而逍遥中了拜月教的忘忧蛊，忘了那段在仙灵岛中的奇缘，后得蜀山酒剑仙传授御剑术等法术。</p>
+		<p>逍遥、灵儿重逢，逍遥护送灵儿回苗疆寻母，一番误闯，半路上杀出了林家堡千金林月如。在林家灵儿显出蛇形，月如表哥刘晋元见到当即昏倒，灵儿只得仓皇而逃，后经山神点化，得知自己是女娲后人。逍遥、月如、晋元误以为灵儿被蛇妖所捉，3人斩杀蛇妖狐妖。</p>
+		<p>同时灵儿遇见寻找自己的少时玩伴阿奴和南诏国石长老义子唐钰等人。逍遥等人解除了僵尸镇僵尸之灾。众人来到扬州城，住进了同一家客栈，逍遥与唐钰结为好友又巧遇晋元。逍遥、灵儿、月如、阿奴、唐钰、晋元几个年轻人在客栈中各自思考他们的人生、理想、情感。</p>
+		<p>花灯会后，逍遥、月如、晋元起身上路，唐钰、阿奴被拜月埋于地下，灵儿被剑圣镇于锁妖塔内。逍遥、月如听说晋元得了重病，赶往刘家，二人与蜘蛛精打斗，晋元新婚妻子彩依为救晋元化作彩蝶。酒剑仙带逍遥、月如乘坐飞天葫芦来到蜀山救灵儿。阿奴与唐钰得救。拜月教主来到刘家害死晋元父母，带走晋元。</p>
+		</p>
+	</div>
+	<!--右边div-->
+	<div class="right_div">
+		<div class="personalLogo_div">
+			<img src="http://e.hiphotos.baidu.com/baike/pic/item/3b87e950352ac65c0c2f6ebffcf2b21192138ad7.jpg">
+		</div>
+		<div class="personalLogo_div">
+			<img src="http://f.hiphotos.baidu.com/baike/pic/item/cdbf6c81800a19d8e10afe6a33fa828ba61e4657.jpg">
+		</div>
+		<div class="personalLogo_div">
+			<img src="http://c.hiphotos.baidu.com/baike/s%3D500/sign=2b2bae0fb851f819f525034aeab44a76/3c6d55fbb2fb43167f1b525e28a4462309f7d389.jpg">
+		</div>
+		<div class="personalLogo_div">
+			<img src="http://a.hiphotos.baidu.com/baike/s%3D500/sign=32d89e3765224f4a5399731339f79044/5243fbf2b2119313305d17a16d380cd791238d81.jpg">
+		</div>
+	</div>	
+</div>
+</body>
+
+</html>
