@@ -2,7 +2,7 @@
 var aqiData = {};
 var numInputVal ;
 
-//为了学习和熟悉jQuery的DOM操作，排序没有将方块数据抽象出一个数组进行排序再渲染，而是直接对<li></li>进行操作，性能应该没有抽象出数组好。
+
 function orderHandle(){
   var 
   $("li").each(function(index, element){
@@ -13,7 +13,6 @@ function orderHandle(){
     return ;
   };
   })
-
 }
 
 function btnHandle(clickedBtn) {
@@ -55,9 +54,10 @@ function delBtnHandle(numInputVal) {
 
 //检查输入值是否满足要求
 function checkInputValue() {
+  var 
   numInputVal = $.trim($("#aqi-num-input").val());
   //检验是否为正整数
-  if((numInputVal<=0) || !(/^\d+$/.test(numInputVal))||(numInputVal>100)){      
+  if((numInputVal<=0) || !(/^\d+$/.test(numInputVal))||(numInputVal>100)){
     alert(numInputVal +"，不是一个10-100正整数");
     return false;
   }
