@@ -9,20 +9,26 @@ function renderData(data){
   var str= '';
   var c= 0;
   for(var i=0;i<liData.length; i++) {
-    str += '<li id='+liData[i]+'>'+liData[i]+'</li>';
+    str += '<li id='+liData[i]+'><p>'+liData[i]+'</p></li>';
   }
   Ul.empty();
   Ul.append(str);
 }
 
 function renderSearchStr (str) {
-  var lists = $("ul").find('li:contains("'+str+'")').css('border', '1px solid black');
-  lists.each(function(index, element) {
-    $(element).html()
+  // var selectedBefore = $("li").find('li:has("span")');
+  // var beforeStr = lists.html();
+  // beforeStr = beforeStr.replace(new RegExp(str, "<span>"), "<span class='select'>" + str + "</span>");
 
-    
+
+  //找到含有搜索字符串的list节点
+  var lists = $("ul").find('li:contains("'+str+'")');
+  //遍历list节点并更改节点内容
+  lists.each(function(index, element) {
+    var listText = $(element).html();
+    listText = listText.replace(new RegExp(str, "g"), "<span class='select'>" + str + "</span>");
+    $(element).html(listText);
    })
-  
 }
 
 function btnHandle(clickedBtn) {  
