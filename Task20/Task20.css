@@ -1,0 +1,42 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+textarea{
+
+}
+
+button{
+	/*background-color: red;*/
+	margin: 8px 2px;
+}
+
+div{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+ul{
+	width: auto;
+	height: 30px;
+	list-style-type: none;;
+}
+
+li{
+	background-color: pink;
+	width: auto;
+	height:30px;
+	float: left;
+	margin: 1px;
+	text-align: center;
+	line-height:30px;
+	padding: 0px 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	border: 1px solid pink;
+}
+
+
+
+	

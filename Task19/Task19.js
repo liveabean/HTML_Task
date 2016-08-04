@@ -1,77 +1,116 @@
 
 var aqiData = {};
-var numInputVal ;
+var numInputVal;
+var maxInputNum = 60;
 
-
-function orderHandle(){
-  var 
-  $("li").each(function(index, element){
-  var existNum = $(element).html();
-  if (numInputVal==existNum){
-    alert(numInputVal +"这个数字已经存在");
-    isExist = false;
-    return ;
-  };
-  })
-}
-
-function btnHandle(clickedBtn) {
-  var btnID = $(clickedBtn).attr("id");
-  if (btnID == "leftIn") {
-    $("ul").prepend('<li id='+numInputVal+'>'+numInputVal+'</li>');
-    //给新增的list增加点击删除事件
-    delBtnHandle(numInputVal);
-    
-    var test = parseInt(numInputVal) +1;
-    $("#aqi-num-input").val(test);
-  } else if (btnID == "rightIn") {
-    $("ul").append('<li id='+numInputVal+'>'+numInputVal+'</li>');
-    //给新增的list增加点击删除事件
-    delBtnHandle(numInputVal);
-
-  } else if (btnID == "leftOut") {
-    if($("ul").find("li").length){
-      $("li").filter(":first").remove();
-    } else{
-      alert("亲，删的一点都不剩了哦");
-    }
-  } else if (btnID == "rightOut") {
-    if($("ul").find("li").length){
-       $("li").filter(":last").remove();
-    } else{
-      alert("亲，删的一点都不剩了哦");
+function bubbleSort(arr) {
+  newarr = arr.slice();
+  if (newarr.length <= 2) return newarr;
+  for (var i = 0; i < newarr.length - 1; i++) {
+    for (var j = 0; j < newarr.length - i - 1; j++) {
+      if (newarr[j] > newarr[j + 1]) {
+        newarr[j] = [newarr[j + 1], newarr[j + 1] = newarr[j]][0];
+      }
     }
   }
-} 
+  return newarr;
+}
 
-function delBtnHandle(numInputVal) {
-  var numStr = numInputVal.toString()
-  var liVar = $("#"+numStr);
-  liVar.click(function delList () {
-    liVar.remove();
+function orderHandle(){
+  if (apiData.length<10) {
+    alert("输入10个数据以上才能排序哦");
+  } else{
+    var orderData = bubbleSort(apiData);
+    renderData(orderData);  
+  } 
+}
+
+function renderData(data){
+  var liData = data;
+  var Ul = $("ul");
+  var str= '';
+  var c= 0;
+  for(var i=0;i<liData.length; i++) {
+    var listHeight = parseInt(liData[i])*2;
+    var marginTop = 200 - listHeight;
+    str += '<li style="height:'+listHeight+'px;margin-top:'+marginTop+'px" id='+liData[i]+'></li>';
+  }
+  Ul.empty();
+  Ul.append(str);
+  //给每个按钮添加删除事件
+  $('li').click(function(event) {
+    delListHandle(this);
   });
 }
 
-//检查输入值是否满足要求
-function checkInputValue() {
-  var 
-  numInputVal = $.trim($("#aqi-num-input").val());
-  //检验是否为正整数
-  if((numInputVal<=0) || !(/^\d+$/.test(numInputVal))||(numInputVal>100)){
-    alert(numInputVal +"，不是一个10-100正整数");
-    return false;
+function btnHandle(clickedBtn) {  
+  var btnID = $(clickedBtn).attr("id");
+  if (btnID == "leftIn") {
+    apiData.unshift(numInputVal);
+  } else if (btnID == "rightIn") {
+    apiData.push(numInputVal);
+  } else if (btnID == "leftOut") {
+    if (apiData.length>0) {
+      apiData.shift();
+    } else{
+      alert("亲，删得一点都不剩了哦");
+    }
+  } else if (btnID == "rightOut") {
+    if (apiData.length>0) {
+      apiData.pop();
+    } else{
+      alert("亲，删得一点都不剩了哦");
+    }
+
   }
-  //使用each检验是否重复输入
-  var isExist=true;
-  $("li").each(function(index, element){
-    var existNum = $(element).html();
-    if (numInputVal==existNum){
-      alert(numInputVal +"这个数字已经存在");
-      isExist = false;
-      return ;
-    };
-  })
-  return isExist;
+  renderData(apiData);
+}
+
+function delListHandle(clickedList) {
+  var deleteData = $(clickedList).attr("id");
+  for(var index in apiData){
+    if (deleteData==apiData[index]){
+      apiData.splice(index,1);
+    }
+  }
+  renderData(apiData);
+}
+
+//检查输入值是否满足要求
+//inputValue：输入值
+//existValues：数值数组，用于判断是否重复
+//maxNum:最大的个数限制
+function checkInputValue(inputValue,existValues,maxNum) {
+  var checkResult ={
+    "code":-1, //-1表示没有经过检查或检查不全面
+    "msg":""
+  };
+  
+  //1.检验是否为正整数
+  if((inputValue<=0) || !(/^\d+$/.test(inputValue))||(inputValue>100)){ 
+    checkResult.msg = inputValue +"，不是一个10-100正整数";
+    checkResult.code = 400;
+    return checkResult;
+  }
+  //2.判断输入值是否超过maxNum
+  if (existValues.length>=maxNum) {
+    checkResult.msg = "亲，不得超过"+maxNum+"个哦(⊙o⊙)";
+    checkResult.code = 400;
+    return checkResult;
+  }
+  //3.使用for循环检验是否重复输入
+  for(var index in existValues){
+    var existValue = existValues[index];
+    if (inputValue==existValue){
+      checkResult.msg = inputValue +"这个数字已经存在";
+      checkResult.code = 400;
+      return checkResult;
+    }
+  }
+  //判断是否符合该方法的检验
+  checkResult.msg = inputValue + "符合要求";
+  checkResult.code = 200;
+  return checkResult;
 }
 
 //判断小方块的总元素数量
@@ -80,27 +119,27 @@ function checkListNum(){
 }
  
 function init() {
+  apiData =  [11, 22, 44, 100, 99, 88, 66, 55, 33, 77,];
+  renderData(apiData);
   //左侧入
   $("#leftIn").click(function(){
-    //判断小方块个数
-    if ($("ul").find("li").length<60) {
-      if (checkInputValue()==true) {
-        btnHandle(this);
-      };
+    numInputVal = $.trim($("#aqi-num-input").val());
+    var checkResult = checkInputValue(numInputVal,apiData,maxInputNum);
+    if (checkResult.code==200) {
+      btnHandle(this);
     } else{
-      alert("亲，队列元素数量最多为60个哦")
+      alert(checkResult.msg);
     }
   });
 
   //右侧入
   $("#rightIn").click(function(){
-    //判断小方块个数
-    if ($("ul").find("li").length<60) {
-      if (checkInputValue()) {
-        btnHandle(this);
-      };    
+    numInputVal = $.trim($("#aqi-num-input").val());
+    var checkResult = checkInputValue(numInputVal,apiData,maxInputNum);
+    if (checkResult.code==200) {
+      btnHandle(this);
     } else{
-      alert("亲，队列元素数量最多为60个哦")
+      alert(checkResult.msg);
     }
   });  
 
