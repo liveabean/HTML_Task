@@ -3,32 +3,22 @@ var aqiData = {};
 var numInputVal;
 var maxInputNum = 60;
 
-function renderData(data){
-  var liData = data;
+function renderData(searchStr){
+  var liData = apiData;
   var Ul = $("ul");
-  var str= '';
+  var lists= '';
   var c= 0;
   for(var i=0;i<liData.length; i++) {
-    str += '<li id='+liData[i]+'><p>'+liData[i]+'</p></li>';
+    var listStr = liData[i];
+    if (searchStr!=null&&searchStr.length>0) {
+      if (listStr.search(searchStr)>0) {
+        listStr = listStr.replace(new RegExp(searchStr, "g"), "<span>"+searchStr+"</span>");
+      }
+    }
+   lists += "<li>"+listStr+"</li>";  
   }
   Ul.empty();
-  Ul.append(str);
-}
-
-function renderSearchStr (str) {
-  // var selectedBefore = $("li").find('li:has("span")');
-  // var beforeStr = lists.html();
-  // beforeStr = beforeStr.replace(new RegExp(str, "<span>"), "<span class='select'>" + str + "</span>");
-
-
-  //找到含有搜索字符串的list节点
-  var lists = $("ul").find('li:contains("'+str+'")');
-  //遍历list节点并更改节点内容
-  lists.each(function(index, element) {
-    var listText = $(element).html();
-    listText = listText.replace(new RegExp(str, "g"), "<span class='select'>" + str + "</span>");
-    $(element).html(listText);
-   })
+  Ul.append(lists);
 }
 
 function btnHandle(clickedBtn) {  
@@ -60,13 +50,14 @@ function btnHandle(clickedBtn) {
       return;
     }
   }
-  renderData(apiData);
+  renderData();
 }
 
 function searchBtnHandle () {
   var searchStr = $.trim($("#searchStr").val());
   if (searchStr.length>0&&searchStr!=null) {   
-    renderSearchStr(searchStr);
+    // renderSearchStr(searchStr);
+    renderData(searchStr);
   } else{
     alert("请先输入搜索条件");
   }
@@ -74,7 +65,6 @@ function searchBtnHandle () {
 
 function init() {
   apiData = [];
-  renderData(apiData);
   //左侧入
   $("#leftIn").click(function(){
     btnHandle(this);
