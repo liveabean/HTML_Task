@@ -1,0 +1,25 @@
+  <style type="text/css">
+    body {
+        text-align: center;
+    }
+    
+    div {
+        border: 2px solid gray;
+        display: -webkit-flex;
+        display: flex;
+    flex-wrap:wrap;
+        margin: 36px 24px;
+        -webkit-flex-grow: 1;
+                flex-grow: 1;
+        transition: background-color 1000ms;
+    min-width:20px;
+    min-height:60px;
+    }
+    
+    #tree {
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+        min-width: 260px;
+    }
+    </style>
